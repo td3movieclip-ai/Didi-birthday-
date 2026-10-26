@@ -1,0 +1,504 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#fff0f6">
+<title>My Cutie Didi 🎀</title>
+
+<style>
+*{box-sizing:border-box;margin:0;padding:0}
+
+:root{
+  --pink:#d85f96;
+  --dark-pink:#b8497c;
+  --text:#79566e;
+}
+
+body{
+  min-height:100vh;
+  overflow-x:hidden;
+  font-family:Georgia,serif;
+  color:var(--text);
+  text-align:center;
+  background:
+    radial-gradient(ellipse at top left,#ffe1ee,transparent 55%),
+    linear-gradient(145deg,#fff7fb,#f0eaff,#ffeaf3);
+}
+
+.bg-decoration{
+  position:fixed;
+  pointer-events:none;
+  opacity:.5;
+  z-index:0;
+  animation:floatDecoration 6s ease-in-out infinite;
+}
+.dec1{top:7%;left:5%;font-size:25px}
+.dec2{top:20%;right:6%;font-size:22px;animation-delay:1s}
+.dec3{bottom:12%;left:7%;font-size:23px;animation-delay:2s}
+.dec4{bottom:20%;right:6%;font-size:27px;animation-delay:.5s}
+
+@keyframes floatDecoration{
+  0%,100%{transform:translateY(0) rotate(-5deg)}
+  50%{transform:translateY(-12px) rotate(7deg)}
+}
+
+.container{
+  width:91%;
+  max-width:440px;
+  margin:28px auto;
+  padding:26px 20px 28px;
+  position:relative;
+  z-index:1;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,.9);
+  background:rgba(255,255,255,.8);
+  box-shadow:0 15px 45px rgba(181,107,151,.15);
+  backdrop-filter:blur(12px);
+}
+
+.top-decoration{
+  font-size:27px;
+  letter-spacing:5px;
+  margin-bottom:15px;
+}
+.tagline{
+  color:#a77c9a;
+  font-size:12px;
+  letter-spacing:1px;
+  line-height:1.8;
+}
+h1{
+  margin:12px 0;
+  color:var(--pink);
+  font-size:30px;
+  line-height:1.45;
+}
+h2{
+  color:var(--dark-pink);
+  font-size:22px;
+  line-height:1.6;
+}
+p{
+  font-size:15px;
+  line-height:1.9;
+}
+.intro{margin:16px 0}
+.divider{
+  margin:22px 0;
+  color:#d58bad;
+  letter-spacing:7px;
+}
+
+.gift{
+  margin:18px auto;
+  font-size:88px;
+  cursor:pointer;
+  user-select:none;
+  filter:drop-shadow(0 8px 10px #d779a433);
+  animation:giftBounce 1.7s ease-in-out infinite;
+}
+@keyframes giftBounce{
+  0%,100%{transform:translateY(0) rotate(0)}
+  50%{transform:translateY(-10px) rotate(3deg)}
+}
+
+button{
+  display:inline-block;
+  border:none;
+  border-radius:30px;
+  padding:13px 23px;
+  margin:9px 3px;
+  font-family:inherit;
+  font-size:14px;
+  color:white;
+  background:linear-gradient(135deg,#ed8db6,#d65e96);
+  box-shadow:0 6px 18px #d65e9633;
+  cursor:pointer;
+  transition:transform .2s;
+}
+button:active{transform:scale(.96)}
+button:focus-visible{
+  outline:3px solid #a77cce;
+  outline-offset:4px;
+}
+.secondary-button{
+  background:linear-gradient(135deg,#b9a1e9,#9274cf);
+}
+.hidden{display:none!important}
+
+.cake{
+  margin:12px 0;
+  font-size:76px;
+  animation:giftBounce 1.8s infinite;
+}
+.birthday-note{
+  margin:15px 0;
+  padding:15px;
+  background:linear-gradient(135deg,#fff4f9,#f6f0ff);
+  border-radius:20px;
+  line-height:2;
+}
+
+/* Birthday letter */
+.letter{
+  margin-top:22px;
+  padding:24px 20px;
+  text-align:left;
+  background:linear-gradient(160deg,#fffafd,#fff0f6,#f4efff);
+  border:1px solid #f2c5da;
+  border-radius:24px;
+  box-shadow:0 10px 30px #bd7ba51c;
+  animation:letterOpen .8s ease;
+}
+.letter-top{
+  text-align:center;
+  font-size:11px;
+  letter-spacing:2px;
+  color:#c66a98;
+  margin-bottom:20px;
+}
+.letter h2{
+  text-align:center;
+  font-size:22px;
+  color:#cb6394;
+  margin-bottom:18px;
+}
+.letter p{
+  font-size:15px;
+  line-height:2;
+  color:#78556b;
+  margin:16px 0;
+  overflow-wrap:anywhere;
+}
+.letter-end{
+  text-align:center;
+  border-top:1px dashed #e9b5cf;
+  padding-top:20px;
+  margin-top:22px;
+  line-height:1.9;
+}
+.letter-end span{
+  font-size:13px;
+  color:#a66b8b;
+}
+.letter-end h3{
+  color:#ce6597;
+  font-size:20px;
+  margin-top:8px;
+}
+.letter-decor{
+  font-size:21px;
+  letter-spacing:3px;
+  margin-top:12px;
+}
+
+@keyframes letterOpen{
+  from{opacity:0;transform:translateY(15px) scale(.98)}
+  to{opacity:1;transform:translateY(0) scale(1)}
+}
+
+/* Final surprise */
+.final-card{
+  margin-top:22px;
+  padding:22px 15px;
+  background:linear-gradient(135deg,#fff0f7,#f1eaff);
+  border:1px solid #f3d2e4;
+  border-radius:24px;
+  animation:letterOpen .8s ease;
+}
+.final-emoji{
+  font-size:45px;
+  margin:15px 0;
+}
+.final-card p{margin:13px 0}
+.footer{
+  color:#ad84a0;
+  font-size:12px;
+  line-height:2;
+  margin-top:25px;
+}
+.floating{
+  position:fixed;
+  bottom:-40px;
+  z-index:5;
+  pointer-events:none;
+  animation:floatUp 5s linear forwards;
+}
+@keyframes floatUp{
+  to{transform:translateY(-115vh) rotate(35deg);opacity:0}
+}
+@media(max-width:360px){
+  .container{padding:22px 15px}
+  h1{font-size:26px}
+  .letter{padding:20px 16px}
+  .letter p{font-size:14px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{
+    animation-duration:.01ms!important;
+    animation-iteration-count:1!important;
+    scroll-behavior:auto!important;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<div class="bg-decoration dec1">🌸</div>
+<div class="bg-decoration dec2">✨</div>
+<div class="bg-decoration dec3">🎀</div>
+<div class="bg-decoration dec4">🦋</div>
+
+<main class="container">
+
+  <div class="top-decoration">🎀 🌷 🎀</div>
+  <p class="tagline">A LITTLE SURPRISE MADE JUST FOR YOU</p>
+
+  <h1>Happy Birthday! 🎂</h1>
+  <h2>My Cutie Didi 💗</h2>
+
+  <p class="intro">
+    Aajker dinta tomar motoi shundor hok. 🌸
+    Tomar jonno ache chhotto ekta birthday surprise!
+  </p>
+
+  <div id="gift" class="gift" role="button"
+       tabindex="0" aria-label="Open birthday gift"
+       onclick="openGift()"
+       onkeydown="if(event.key==='Enter'||event.key===' '){event.preventDefault();openGift()}">
+    🎁
+  </div>
+
+  <button id="openBtn" onclick="openGift()">
+    Open Your Gift 💌
+  </button>
+
+  <section id="surprise" class="hidden">
+
+    <div class="divider">♡ ✨ ♡</div>
+    <div class="cake">🎂</div>
+
+    <h1>Happy Birthday!</h1>
+    <h2>My Cutie Didi 🧸</h2>
+
+    <div class="birthday-note">
+      Tomar jiboner protiti din anonde bhore uthuk.
+      Tomar mukhe shobshomoy hashi thakuk ar
+      tomar shob shundor shopno puron hok. 💕
+    </div>
+
+    <p>
+      Tomar jonno banano ei chhotto upoharta
+      tomar mukhe ektukhani hashi photak. 🌷
+    </p>
+
+    <button onclick="readLetter()">
+      Read Your Birthday Letter 💌
+    </button>
+
+    <!-- Emotional birthday letter in Bengali written with English letters -->
+    <article id="letter" class="letter hidden">
+
+      <div class="letter-top">
+        🌷 A LITTLE LETTER FOR YOU 🌷
+      </div>
+
+      <h2>Amar Cutie Didi-r Jonno 💗</h2>
+
+      <p>Priyo Didi, 🧸</p>
+
+      <p>
+        Shubho jonmodin! 🎂🌸
+        Tomar ei bishesh dine tomar jonno roilo
+        ekrash shubhechha ar onek onek bhalo
+        thakar prarthona.
+      </p>
+
+      <p>
+        Tumi shobshomoy hashikhushi theko, nijer
+        shopnogulo puron koro ar jiboner protita
+        muhurto shundorbhabe upobhog koro.
+        Tomar shamne jeno onek bhalo sujog ashe
+        ar protita din notun anondo niye ashe.
+      </p>
+
+      <p>
+        Didi hisebe tomar shonge howa chhoto chhoto
+        kothagulo ar shundor muhur togulo amar kachhe
+        shottyi special. Tomar ei bishesh dine
+        shubhechha janate pere amar khub bhalo lagchhe.
+      </p>
+
+      <p>
+        Jibone kokhono mon kharap hole mone rekho,
+        kharap shomoy chirokal thake na.
+        Nijer opor bishshash rekho, nijer jotno nio
+        ar hashte bhulo na. Tumi shobshomoy bhalo
+        thakar joggo. 🌈
+      </p>
+
+      <p>
+        Tomar agami dingulo phuler moto shundor hok,
+        akasher moto bishal hok tomar shopno,
+        ar tomar jibon bhore uthuk shanti, anondo
+        ar shundor shundor sritite. 🌼
+      </p>
+
+      <p>
+        Ajker dinta nijer moto kore upobhog koro.
+        Onek hasho, cake khao ar shundor shundor
+        sriti toiri koro! 🎂🎁
+      </p>
+
+      <p>
+        Abaro onek onek shubho jonmodin, Didi!
+        Shobshomoy bhalo theko, sustho theko
+        ar tomar shundor hashita dhore rekho. 💗
+      </p>
+
+      <div class="letter-end">
+        <span>Onek shubhechha o doa roilo</span>
+        <h3>Tomar chhotto bhai 💕</h3>
+        <div class="letter-decor">🧸 🌷 🎀 🌷 🧸</div>
+      </div>
+
+    </article>
+
+    <button class="secondary-button" onclick="finalSurprise()">
+      One Last Surprise ✨
+    </button>
+
+    <section id="final" class="final-card hidden">
+
+      <div class="divider">♡ ♡ ♡</div>
+      <div class="final-emoji">🧸💗🌷</div>
+
+      <h2>A Special Wish For You</h2>
+
+      <p>
+        Thank you for being such a wonderful Didi. 🌸
+      </p>
+
+      <p>
+        Tomar jiboner protiti shokal notun asha niye ashuk,
+        protiti din anonde katuk ar protiti raat
+        tomake shanti dik.
+      </p>
+
+      <p>
+        Tomar shob bhalo shopno puron hok.
+        Nijer jotno nio, shobshomoy hashi khushi theko
+        ar nijer moto korei shundor theko. 💖
+      </p>
+
+      <h2>Stay Happy, Stay Blessed! 🎀</h2>
+
+      <div class="final-emoji">🌸 🎁 🦋 🌷</div>
+
+      <p>With lots of birthday wishes! 💌</p>
+
+    </section>
+  </section>
+
+  <div class="footer">
+    Made with care, just for you ♡<br>
+    A little website, a heartfelt wish 💗
+  </div>
+
+</main>
+
+<script>
+"use strict";
+
+function openGift(){
+  const surprise = document.getElementById("surprise");
+
+  if(!surprise.classList.contains("hidden")) return;
+
+  document.getElementById("gift").classList.add("hidden");
+  document.getElementById("openBtn").classList.add("hidden");
+  surprise.classList.remove("hidden");
+
+  hearts(18);
+
+  setTimeout(()=>{
+    surprise.scrollIntoView({
+      behavior:"smooth",
+      block:"start"
+    });
+  },100);
+}
+
+function readLetter(){
+  const letter = document.getElementById("letter");
+  letter.classList.remove("hidden");
+
+  hearts(12);
+
+  setTimeout(()=>{
+    letter.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+  },100);
+}
+
+function finalSurprise(){
+  const final = document.getElementById("final");
+  final.classList.remove("hidden");
+
+  hearts(30);
+
+  setTimeout(()=>{
+    final.scrollIntoView({
+      behavior:"smooth",
+      block:"center"
+    });
+  },100);
+}
+
+function hearts(count){
+  const emojis = ["💗","💕","🌸","✨","💖","🎀","🦋"];
+
+  for(let i=0;i<count;i++){
+    setTimeout(()=>{
+      const item = document.createElement("span");
+
+      item.className = "floating";
+      item.textContent =
+        emojis[Math.floor(Math.random()*emojis.length)];
+
+      item.style.left = Math.random()*94+"vw";
+      item.style.fontSize = (16+Math.random()*18)+"px";
+      item.style.animationDuration = (3+Math.random()*3)+"s";
+
+      document.body.appendChild(item);
+
+      setTimeout(()=>item.remove(),6500);
+    },i*90);
+  }
+}
+
+setInterval(()=>{
+  if(document.hidden) return;
+
+  const item = document.createElement("span");
+  const emojis = ["💗","✨","🌸","🦋"];
+
+  item.className = "floating";
+  item.textContent =
+    emojis[Math.floor(Math.random()*emojis.length)];
+
+  item.style.left = Math.random()*95+"vw";
+  item.style.fontSize = "18px";
+
+  document.body.appendChild(item);
+  setTimeout(()=>item.remove(),5500);
+},1400);
+</script>
+
+</body>
+</html>
